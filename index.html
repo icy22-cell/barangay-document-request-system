@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Barangay Document Request System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Barangay Document Request System</h1>
+    <p>Request a barangay document online and track its status.</p>
+  </header>
+
+  <main>
+    <section class="request-section">
+      <h2>Request a document</h2>
+      <form id="request-form">
+        <label for="full-name">Full name</label>
+        <input type="text" id="full-name" required>
+
+        <label for="address">Address / Purok</label>
+        <input type="text" id="address" required>
+
+        <label for="contact">Contact number</label>
+        <input type="tel" id="contact" required>
+
+        <label for="document-type">Document type</label>
+        <select id="document-type" required>
+          <option value="">Choose a document</option>
+          <option>Barangay Clearance</option>
+          <option>Certificate of Residency</option>
+          <option>Certificate of Indigency</option>
+          <option>Business Clearance</option>
+        </select>
+
+        <label for="purpose">Purpose</label>
+        <input type="text" id="purpose" required>
+
+        <button type="submit" id="submit-btn">Submit request</button>
+      </form>
+    </section>
+
+    <section class="list-section">
+      <h2>Submitted requests</h2>
+      <table id="request-table">
+        <thead>
+          <tr>
+            <th>Ref no.</th>
+            <th>Name</th>
+            <th>Document</th>
+            <th>Purpose</th>
+            <th>Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="request-list"></tbody>
+      </table>
+      <p id="empty-message">No requests yet. Submit the form to add one.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>SAD Midterm Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
